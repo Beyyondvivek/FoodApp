@@ -216,7 +216,7 @@ const SplashScreen = () => {
             style={styles.button}
             activeOpacity={0.9}
             onPress={gotoHomeScreen}>
-            <Text style={styles.buttonText}>Craving for more</Text>
+            <Text style={styles.buttonText}>Craving For More</Text>
           </TouchableOpacity>
         </View>
         {/* FlatList Carousel */}
@@ -322,10 +322,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 8,
     elevation: 2,
+    shadowColor:'grey'
   },
   buttonText: {
     color: '#000',
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 20,
   },
 });

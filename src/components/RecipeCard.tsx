@@ -510,11 +510,11 @@ const RecipeCarousel = () => {
                           item.isBookmarked ? 'bookmark' : 'bookmark-outline'
                         }
                         size={24}
-                        color={item.isBookmarked ? '#FF6B6B' : '#fff'}
+                        color={item.isBookmarked ? '#A064FF' : '#fff'}
                       />
                     </TouchableOpacity>
 
-                    <TouchableOpacity
+                    {/* <TouchableOpacity
                       style={styles.actionButton}
                       onPress={() => toggleLike(item.id)}>
                       <Ionicons
@@ -522,7 +522,7 @@ const RecipeCarousel = () => {
                         size={24}
                         color={item.isLiked ? '#FF6B6B' : '#fff'}
                       />
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                   </View>
 
                   <View style={styles.difficultyContainer}>
@@ -568,7 +568,7 @@ const RecipeCarousel = () => {
 
                   <TouchableOpacity style={styles.recipeButton}>
                     <Text style={styles.recipeButtonText}>See Full Recipe</Text>
-                    <Ionicons name="arrow-forward" size={16} color="#4CAF50" />
+                    <Ionicons name="arrow-forward" size={16} color="white" />
                   </TouchableOpacity>
                 </>
               )}
@@ -597,7 +597,7 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 10},
     shadowOpacity: 0.1,
     shadowRadius: 12,
-    height: SCREEN_HEIGHT * 0.5, // Increased height for better proportions
+    height: SCREEN_HEIGHT * 0.4, // Increased height for better proportions
     borderColor: 'lightgrey',
     borderWidth: 1,
     marginHorizontal: SPACING / 2, // Fixed margin calculation
@@ -612,7 +612,7 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   actionButton: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    // backgroundColor: 'rgba(0,0,0,0.3)',
     borderRadius: 20,
     padding: 6,
   },
@@ -670,9 +670,10 @@ const styles = StyleSheet.create({
     padding: 12,
     borderTopWidth: 1,
     borderTopColor: '#eee',
+    backgroundColor: '#6A5ACD',
   },
   recipeButtonText: {
-    color: '#4CAF50',
+    color: 'white',
     fontWeight: 'bold',
   },
   shimmerOverlay: {

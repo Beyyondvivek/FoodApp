@@ -21,5 +21,14 @@ export default function useNavigate() {
     gotoProfileScreen() {
       navigation.push('ProfileScreen');
     },
+    gotoRecipeScreen() {
+      navigation.push('RecipeScreen');
+    },
+    gotoNotificationScreen() {
+      navigation.push('NotificationScreen');
+    },
+    gotoRecipePage() {
+      navigation.push('RecipePage');
+    },
   };
 }

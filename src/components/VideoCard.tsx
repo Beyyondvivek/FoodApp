@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Video from 'react-native-video';
-import Ionicons from 'react-native-vector-icons/Ionicons'; // or use 'react-native-vector-icons/Ionicons'
 
 interface VideoCardProps {
   uri: string;
@@ -38,8 +37,8 @@ export default VideoCard;
 
 const styles = StyleSheet.create({
   card: {
-    width: 320,
-    height: 400,
+    width: 180,
+    height: 250,
     borderRadius: 16,
     overflow: 'hidden',
     marginRight: 16,

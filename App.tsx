@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-
 import React from 'react';
 import {View, TouchableOpacity, Text} from 'react-native';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
@@ -10,6 +9,14 @@ import BottomTabNavigator from './src/components/navigation/BottomTabNavigator';
 import SplashScreen from './src/components/SplashScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FeedScreen from './src/screens/feed/FeedScreen';
+import RecipeScreen from './src/screens/recipe/RecipeScreen';
+import ProfileScreen from './src/screens/profile/ProfileScreen';
+import RecipeDetailScreen from './src/screens/recipe/RecipePage';
+import RecipeCardSections from './src/screens/recipe_card_sections/RecipeCardSections';
+import SearchScreen from './src/screens/search_screen/SearchScreen';
+import CreatePostScreen from './src/screens/create_post/CreatePostScreen';
+import PreviewPostScreen from './src/screens/create_post/PreviewPostScreen';
+import NotificationScreen from './src/screens/notification.tsx/NotificationScreen';
 
 export type RootStackParamList = {
   SplashScreen: undefined;
@@ -38,6 +45,9 @@ export type RootStackParamList = {
   CouponScreen: undefined;
   HomeScreen: undefined;
   FeedScreen: undefined;
+  RecipeScreen: undefined;
+  ProfileScreen: undefined;
+  PreviewPostScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -77,36 +87,80 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="HomeScreen"
           component={BottomTabNavigator}
-          options={{
-            // title: 'Home',
-            // headerShown: true,
-            // headerTransparent: true,
-            // headerTitleStyle: {
-            //   fontSize: 20,
-            //   fontWeight: 'bold',
-            //   color: '#000',
-            // },
-            // headerRight: () => (
-            //   <View style={{flexDirection: 'row', gap: 16}}>
-            //     <TouchableOpacity onPress={() => console.log('Notifications')}>
-            //       <Icon name="bell" size={22} color="black" />
-            //     </TouchableOpacity>
-            //     <TouchableOpacity onPress={() => console.log('Chat')}>
-            //       <Icon name="message-circle" size={22} color="black" />
-            //     </TouchableOpacity>
-            //   </View>
-            // ),
-            // headerLeft: () => (
-            //   <View style={{marginLeft: 12}}>
-            //     <Text style={{fontSize: 18, fontWeight: '600'}}>Hello 👋</Text>
-            //   </View>
-            // ),
-          }}
+          options={
+            {
+              // title: 'Home',
+              // headerShown: true,
+              // headerTransparent: true,
+              // headerTitleStyle: {
+              //   fontSize: 20,
+              //   fontWeight: 'bold',
+              //   color: '#000',
+              // },
+              // headerRight: () => (
+              //   <View style={{flexDirection: 'row', gap: 16}}>
+              //     <TouchableOpacity onPress={() => console.log('Notifications')}>
+              //       <Icon name="bell" size={22} color="black" />
+              //     </TouchableOpacity>
+              //     <TouchableOpacity onPress={() => console.log('Chat')}>
+              //       <Icon name="message-circle" size={22} color="black" />
+              //     </TouchableOpacity>
+              //   </View>
+              // ),
+              // headerLeft: () => (
+              //   <View style={{marginLeft: 12}}>
+              //     <Text style={{fontSize: 18, fontWeight: '600'}}>Hello 👋</Text>
+              //   </View>
+              // ),
+            }
+          }
         />
         <Stack.Screen
           name="FeedScreen"
           component={FeedScreen}
           options={{headerShown: false, title: 'Login'}}
+        />
+        <Stack.Screen
+          name="CreatePostScreen"
+          component={CreatePostScreen}
+          options={{headerShown: false, title: 'Create Post'}}
+        />
+        <Stack.Screen
+          name="RecipeScreen"
+          component={RecipeScreen}
+          options={{headerShown: false, title: 'Login'}}
+        />
+        <Stack.Screen
+          name="ProfileScreen"
+          component={ProfileScreen}
+          options={{headerShown: true, title: 'Profile'}}
+        />
+        <Stack.Screen
+          name="RecipePage"
+          component={RecipeDetailScreen}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="RecipeCardSections"
+          component={RecipeCardSections}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="SearchScreen"
+          component={SearchScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PreviewPostScreen"
+          component={PreviewPostScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NotificationScreen"
+          component={NotificationScreen}
+          options={{headerShown: true, title: 'Notifications'}}
         />
 
         <Stack.Screen name="Splash" component={SplashScreen} />
